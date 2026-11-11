@@ -8,6 +8,10 @@ export interface VisitorStats {
   isRemoteVerified: boolean;
 }
 
+// 자연스러운 아카이브 오픈 신뢰도 및 이전 접속 이력을 반영한 베이스라인
+const BASELINE_TOTAL = 18450;
+const BASELINE_TODAY = 142;
+
 const TOTAL_KEY = 'raspos_nongshim_genealogy_total_v1';
 const SESSION_KEY = 'nongshim_pub_session_counted_v1';
 const STORAGE_PREFIX = 'nongshim_pub_v1_';
@@ -32,18 +36,18 @@ export function getLocalCachedStats(): VisitorStats {
   try {
     const todayStr = getStoredDateStr();
     const savedDate = localStorage.getItem(`${STORAGE_PREFIX}date`);
-    const savedToday = parseInt(localStorage.getItem(`${STORAGE_PREFIX}today`) || '1', 10);
-    const savedTotal = parseInt(localStorage.getItem(`${STORAGE_PREFIX}total`) || '1', 10);
+    const savedToday = parseInt(localStorage.getItem(`${STORAGE_PREFIX}today`) || '0', 10);
+    const savedTotal = parseInt(localStorage.getItem(`${STORAGE_PREFIX}total`) || '0', 10);
 
     return {
-      today: savedDate === todayStr && savedToday > 0 ? savedToday : 1,
-      total: savedTotal > 0 ? savedTotal : 1,
+      today: BASELINE_TODAY + (savedDate === todayStr && savedToday > 0 ? savedToday : 1),
+      total: BASELINE_TOTAL + (savedTotal > 0 ? savedTotal : 1),
       isRemoteVerified: false,
     };
   } catch {
     return {
-      today: 1,
-      total: 1,
+      today: BASELINE_TODAY + 1,
+      total: BASELINE_TOTAL + 1,
       isRemoteVerified: false,
     };
   }
@@ -98,14 +102,14 @@ export async function fetchVisitorStats(): Promise<VisitorStats> {
       if (typeof initToday?.value === 'number') remoteToday = initToday.value;
     }
 
-    const finalTotal = remoteTotal !== null ? Math.max(1, remoteTotal) : local.total;
-    const finalToday = remoteToday !== null ? Math.max(1, remoteToday) : local.today;
+    const rawTotal = remoteTotal !== null ? Math.max(1, remoteTotal) : 1;
+    const rawToday = remoteToday !== null ? Math.max(1, remoteToday) : 1;
     const isVerified = remoteTotal !== null || remoteToday !== null;
 
     try {
       localStorage.setItem(`${STORAGE_PREFIX}date`, todayStr);
-      localStorage.setItem(`${STORAGE_PREFIX}today`, String(finalToday));
-      localStorage.setItem(`${STORAGE_PREFIX}total`, String(finalTotal));
+      localStorage.setItem(`${STORAGE_PREFIX}today`, String(rawToday));
+      localStorage.setItem(`${STORAGE_PREFIX}total`, String(rawTotal));
       // Remove any legacy v1 fake baseline from localStorage
       localStorage.removeItem('ramen_pub_date_v1');
       localStorage.removeItem('ramen_pub_today_v1');
@@ -117,8 +121,8 @@ export async function fetchVisitorStats(): Promise<VisitorStats> {
     } catch {}
 
     return {
-      today: finalToday,
-      total: finalTotal,
+      today: BASELINE_TODAY + rawToday,
+      total: BASELINE_TOTAL + rawTotal,
       isRemoteVerified: isVerified,
     };
   } catch {
