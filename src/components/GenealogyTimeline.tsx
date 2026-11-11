@@ -11,14 +11,14 @@ export function GenealogyTimeline({ onOpenProductModal }: GenealogyTimelineProps
   const [selectedBrand, setSelectedBrand] = useState<string>('ALL');
   const [selectedRelation, setSelectedRelation] = useState<string>('ALL');
 
-  // Group products by decade/era
+  // Group products by decade/era (Nongshim 60-year focused)
   const eras = [
-    { label: '1960~70년대: 라면의 탄생과 태동기', start: 1963, end: 1979 },
-    { label: '1980년대: 국민 탕면의 전성기 (신라면·짜파게티·진라면)', start: 1980, end: 1989 },
-    { label: '1990년대: 매운맛과 특화 면발의 분화 (열라면·참깨·멸치칼국수)', start: 1990, end: 1999 },
-    { label: '2000년대: 프리미엄 웰빙과 극한 매운맛 (틈새·맛있는라면)', start: 2000, end: 2009 },
-    { label: '2010년대: 하얀국물 신드롬 & 불닭 볶음면 글로벌 열풍', start: 2010, end: 2019 },
-    { label: '2020년대: 초매운맛 확장 & 모디슈머 융합 (더레드·마열·툼바)', start: 2020, end: 2026 },
+    { label: '1960~70년대: 롯데공업 창립 & 소고기·농심라면 태동기', start: 1965, end: 1979 },
+    { label: '1980년대: 국민 4대 천왕의 황금기 (너구리·안성탕면·짜파게티·신라면)', start: 1980, end: 1989 },
+    { label: '1990년대: 국물 다변화 & 용기면 대중화 (튀김우동·오징어짬뽕·보글보글)', start: 1990, end: 1999 },
+    { label: '2000년대: 프리미엄 탕면 & 웰빙 건면 (무파마·사천짜파게티·감자면)', start: 2000, end: 2009 },
+    { label: '2010년대: 신라면 블랙 & 굵은 면발·건면 혁신 (짜왕·신라면건면)', start: 2010, end: 2019 },
+    { label: '2020년대: 모디슈머 융합 & 글로벌 K-퓨전 (짜파구리·신라면 더레드·툼바)', start: 2020, end: 2026 },
   ];
 
   const getRelationBadge = (relation: GenealogyRelation) => {

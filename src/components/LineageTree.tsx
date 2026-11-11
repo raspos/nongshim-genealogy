@@ -335,9 +335,9 @@ export function LineageTree({
   const getNodeY = (node: LineageLegendNode) => {
     if (selectedBranch === 'NON_SOUP') {
       if (node.canvasY >= 850) {
-        return 470; // Lane: 냉비빔면파 (팔도비빔면, 배홍동)
+        return 470; // Lane: 별미 비빔면파 (배홍동)
       }
-      return 280; // Lane: 짜장 · 불닭 · 퓨전파 (짜파게티, 불닭, 툼바 등)
+      return 280; // Lane: 짜장 · 볶음 · 퓨전파 (짜파게티, 짜왕, 신라면 툼바 등)
     }
     return node.canvasY;
   };
@@ -692,35 +692,35 @@ export function LineageTree({
             onClick={() => scrollToEpoch(0)}
             className="px-3 py-1 rounded-xl bg-white hover:bg-stone-200 text-stone-800 font-bold text-xs transition cursor-pointer shrink-0 border border-stone-300 hover:border-amber-400 shadow-2xs"
           >
-            1963 건국
+            1965 롯데공업 창립
           </button>
           <button
             type="button"
             onClick={() => scrollToEpoch(380)}
             className="px-3 py-1 rounded-xl bg-white hover:bg-stone-200 text-stone-800 font-bold text-xs transition cursor-pointer shrink-0 border border-stone-300 hover:border-amber-400 shadow-2xs"
           >
-            1980 탕·건 대분화
+            1982 너구리 & 사발면
           </button>
           <button
             type="button"
             onClick={() => scrollToEpoch(720)}
             className="px-3 py-1 rounded-xl bg-white hover:bg-stone-200 text-stone-800 font-bold text-xs transition cursor-pointer shrink-0 border border-stone-300 hover:border-amber-400 shadow-2xs"
           >
-            1986 신라면 집권
+            1986 신라면 천하
           </button>
           <button
             type="button"
             onClick={() => scrollToEpoch(1100)}
             className="px-3 py-1 rounded-xl bg-white hover:bg-stone-200 text-stone-800 font-bold text-xs transition cursor-pointer shrink-0 border border-stone-300 hover:border-amber-400 shadow-2xs"
           >
-            2011 하얀국물의 난
+            2011 신라면블랙 & 건면
           </button>
           <button
             type="button"
             onClick={() => scrollToEpoch(1450)}
             className="px-3 py-1 rounded-xl bg-white hover:bg-stone-200 text-stone-800 font-bold text-xs transition cursor-pointer shrink-0 border border-stone-300 hover:border-amber-400 shadow-2xs"
           >
-            2012 불닭 & K-크림
+            2020 짜파구리 & 툼바
           </button>
         </div>
       </div>
@@ -912,7 +912,7 @@ export function LineageTree({
               <div className="flex-1 p-2 flex flex-col justify-center">
                 <span className="text-[11px] font-mono text-amber-400 font-bold">2012 ~ 2026</span>
                 <span className="text-xs font-serif font-black text-stone-100">
-                  제5·6기: 불닭 혁명 & K-크림 퓨전 백가쟁명
+                  제5·6기: 굵은 면발 & 모디슈머·K-퓨전 혁신
                 </span>
               </div>
             </div>
@@ -926,7 +926,7 @@ export function LineageTree({
                     style={{ top: '190px', height: '180px' }}
                   >
                     <span className="text-[10px] font-serif font-black tracking-wider text-amber-500/90 bg-stone-950/90 px-3 py-1 rounded-md border border-amber-900 shadow-md">
-                      짜장 · 불닭 볶음 · 크림 퓨전파 (롯데짜장 · 짜파게티 · 불닭볶음면 · 까르보불닭 · 신라면 툼바)
+                      비국물 볶음 · 짜장 · 크림 퓨전파 (롯데짜장 · 짜파게티 · 사천짜파게티 · 짜파구리 · 신라면 툼바)
                     </span>
                   </div>
 
@@ -935,7 +935,7 @@ export function LineageTree({
                     style={{ top: '380px', height: '180px' }}
                   >
                     <span className="text-[10px] font-serif font-black tracking-wider text-cyan-400/90 bg-stone-950/90 px-3 py-1 rounded-md border border-cyan-900 shadow-md">
-                      새콤달콤 냉비빔면파 (팔도비빔면 vs 배홍동)
+                      새콤달콤 별미 비빔면파 (배홍동 비빔면 · 칼빔면)
                     </span>
                   </div>
                 </>
@@ -973,7 +973,7 @@ export function LineageTree({
                     style={{ top: '675px', height: '150px' }}
                   >
                     <span className="text-[10px] font-serif font-black tracking-wider text-amber-600 bg-stone-950/80 px-2.5 py-1 rounded-md border border-amber-950">
-                      비국물 춘장 짜장 & 화마 볶음파 (롯데짜장 · 짜파게티 · 불닭볶음면 · 까르보불닭)
+                      비국물 춘장 짜장 & 크림 볶음파 (롯데짜장 · 짜파게티 · 짜왕 · 신라면 툼바)
                     </span>
                   </div>
 
@@ -982,7 +982,7 @@ export function LineageTree({
                     style={{ top: '865px', height: '150px' }}
                   >
                     <span className="text-[10px] font-serif font-black tracking-wider text-blue-400 bg-stone-950/80 px-2.5 py-1 rounded-md border border-blue-950">
-                      새콤달콤 냉비빔면파 (팔도비빔면 vs 배홍동)
+                      새콤달콤 별미 비빔면파 (배홍동 비빔면)
                     </span>
                   </div>
                 </>

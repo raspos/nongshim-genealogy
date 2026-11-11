@@ -1,5 +1,5 @@
 import { VisitorCounter } from './VisitorCounter';
-import { NongshimSymbol, NongshimVintageLotteBadge } from './NongshimLogo';
+import { NongshimOfficialLogo, NongshimVintageLotteBadge } from './NongshimLogo';
 
 interface FooterProps {
   onOpenMethodology: () => void;
@@ -10,9 +10,9 @@ export function Footer({ onOpenMethodology }: FooterProps) {
     <footer className="border-t border-stone-300 bg-[#efebe1] py-12 text-stone-600 text-xs">
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row md:items-start justify-between gap-8">
         <div className="space-y-3 max-w-md">
-          <div className="flex items-center gap-2.5 flex-wrap">
-            <NongshimSymbol className="w-6 h-6" />
-            <span className="font-black text-stone-900 text-lg font-serif">농심 라면의 계보</span>
+          <div className="flex items-center gap-3 flex-wrap">
+            <NongshimOfficialLogo className="h-7 w-auto" />
+            <span className="font-black text-stone-900 text-lg font-serif">라면의 계보</span>
             <span className="text-[10px] px-2 py-0.5 rounded bg-red-100 text-red-800 font-bold border border-red-200">
               NONGSHIM ARCHIVE
             </span>

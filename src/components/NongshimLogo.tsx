@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetUrl } from '../utils/imageUrl';
 
 export interface NongshimLogoProps {
   variant?: 'full' | 'symbol' | 'horizontal' | 'vintage' | 'watermark';
@@ -7,47 +8,43 @@ export interface NongshimLogoProps {
 }
 
 /**
- * 농심(NONGSHIM) 공식 심볼 & 로고타입 벡터 컴포넌트
- * 1. 공식 심볼 (The Nongshim Seed & Sun):
- *    - 붉은 태양(정열과 발전) 안에 움트는 생명의 씨앗(농부의 정직한 땀방울과 결실)
- * 2. 1965년 롯데공업(농심의 모태) 빈티지 엠블럼
- * 3. 辛(매울 신) 전설의 캘리그래피 인장
+ * 농심(NONGSHIM) 공식 로고 (빨간 타원 씨앗 심볼 + 농심 워드마크)
  */
-export const NongshimSymbol: React.FC<{ className?: string }> = ({ className = 'w-10 h-10' }) => {
+export const NongshimOfficialLogo: React.FC<{ className?: string; alt?: string }> = ({
+  className = 'h-8 sm:h-9 w-auto',
+  alt = '농심 NONGSHIM 공식 로고'
+}) => {
+  return (
+    <img
+      src={getAssetUrl('images/nongshim-logo-official.svg')}
+      alt={alt}
+      className={`inline-block object-contain select-none ${className}`}
+    />
+  );
+};
+
+/**
+ * 농심 공식 심볼 (빨간 타원 속 발아하는 순백의 씨앗)
+ */
+export const NongshimSymbol: React.FC<{ className?: string }> = ({ className = 'w-9 h-9' }) => {
   return (
     <svg
-      viewBox="0 0 100 100"
+      viewBox="48 130.9 41 34.2"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={`${className} drop-shadow-md select-none`}
-      aria-label="농심 공식 심볼"
+      className={`${className} drop-shadow-sm select-none inline-block`}
+      aria-label="농심 공식 심볼마크"
     >
-      {/* 붉은 태양 원형 배경 (Nongshim Radiant Red) */}
-      <circle cx="50" cy="50" r="48" fill="#e11826" />
-      <circle cx="50" cy="50" r="47" stroke="#ffffff" strokeWidth="2" opacity="0.3" />
-
-      {/* 내부 미세한 골드 그라데이션 광배 */}
-      <radialGradient id="nsSunGlow" cx="50" cy="40" r="45" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#ff4d4d" />
-        <stop offset="85%" stopColor="#e11826" />
-        <stop offset="100%" stopColor="#b30e1a" />
-      </radialGradient>
-      <circle cx="50" cy="50" r="46" fill="url(#nsSunGlow)" />
-
-      {/* 농심의 상징: 대지에서 움트는 생명의 씨앗과 새싹 (The Nongshim Sprout & Seed) */}
-      {/* 1. 좌측 곡선 잎맥 */}
+      {/* 바깥 흰색 테두리 / 배경 */}
       <path
-        d="M50 18C44 26 31 43 31 58C31 71 39 80 50 82C43 78 38 70 38 59C38 46 47 30 50 18Z"
-        fill="#ffffff"
+        style={{ fill: '#FFF' }}
+        d="m 68.390454,165.10553 c 11.046605,0 19.996211,-7.63346 19.996211,-17.04811 0,-9.42337 -8.949606,-17.05683 -19.996211,-17.05683 -11.046611,0 -20.004972,7.63347 -20.004972,17.05683 0,9.41465 8.958361,17.04811 20.004972,17.04811"
       />
-      {/* 2. 우측 결실의 둥근 열매 & 싹 */}
+      {/* 붉은 타원 (Nongshim Red #E60013) 과 중심의 하얀 발아 씨앗 */}
       <path
-        d="M50 24C53 32 67 44 67 58C67 70 59 79 50 82C56 79 61 71 61 59C61 48 53 34 50 24Z"
-        fill="#fed7aa"
+        style={{ fill: '#E60013' }}
+        d="m 49.815661,148.05743 c 0,-8.74776 8.317868,-15.83721 18.574793,-15.83721 10.248158,0 18.566026,7.08945 18.566026,15.83721 0,8.73903 -8.317868,15.82856 -18.566026,15.82856 -10.256925,0 -18.574793,-7.08952 -18.574793,-15.82856 m 18.574793,2.68494 c 3.255194,0 5.896205,-3.80797 5.896205,-8.49333 0,-4.68542 -2.641011,-8.48461 -5.896205,-8.48461 -3.263961,0 -5.904966,3.79919 -5.904966,8.48461 0,4.68536 2.641005,8.49333 5.904966,8.49333"
       />
-      {/* 3. 중앙 태동하는 씨앗 핵 */}
-      <ellipse cx="50" cy="59" rx="7.5" ry="11" fill="#ffffff" />
-      <circle cx="50" cy="57" r="4.5" fill="#e11826" />
     </svg>
   );
 };
@@ -68,7 +65,7 @@ export const ShinSealMark: React.FC<{ className?: string }> = ({ className = 'w-
   return (
     <div
       className={`relative inline-flex items-center justify-center rounded-xl bg-gradient-to-br from-red-600 to-stone-950 p-1 border border-amber-400/80 shadow-md ${className}`}
-      title="매울 辛(신) — 신춘호 회장 친필 브랜드 인장"
+      title="매울 辛(신) — 故 신춘호 회장 친필 브랜드 인장"
     >
       <span className="font-serif font-black text-amber-300 text-sm leading-none select-none">
         辛
@@ -79,17 +76,13 @@ export const ShinSealMark: React.FC<{ className?: string }> = ({ className = 'w-
 
 export function NongshimHeaderLogo() {
   return (
-    <div className="flex items-center gap-3 select-none">
-      {/* 농심 공식 심볼 */}
-      <div className="relative group cursor-pointer transition-transform duration-300 hover:scale-105">
-        <NongshimSymbol className="w-10 h-10 sm:w-11 sm:h-11" />
-        <div className="absolute -bottom-1 -right-1">
-          <span className="flex h-3 w-3 relative">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
-          </span>
-        </div>
+    <div className="flex items-center gap-3.5 select-none">
+      {/* 농심 공식 실제 로고 이미지 */}
+      <div className="relative group cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center">
+        <NongshimOfficialLogo className="h-8 sm:h-9 w-auto" />
       </div>
+
+      <div className="h-7 w-[1px] bg-stone-300 hidden sm:block" />
 
       <div className="flex flex-col">
         <div className="flex items-center gap-2">
@@ -98,12 +91,12 @@ export function NongshimHeaderLogo() {
             NONGSHIM 1965 — 2026
           </span>
           <span className="text-[10px] font-mono font-bold text-stone-500 hidden sm:inline">
-            한국 라면 40년 1위 종가
+            한국 라면 40년 연속 1위 종가
           </span>
         </div>
 
-        <h1 className="text-2xl sm:text-3xl font-black text-stone-950 tracking-tight font-serif mt-0.5 flex items-center gap-2">
-          <span>농심 라면의 계보</span>
+        <h1 className="text-xl sm:text-2xl font-black text-stone-950 tracking-tight font-serif mt-0.5 flex items-center gap-2">
+          <span>라면의 계보</span>
           <span className="text-xs font-mono font-bold px-2 py-0.5 rounded-full bg-stone-900 text-amber-300 border border-stone-700">
             60년 족보
           </span>

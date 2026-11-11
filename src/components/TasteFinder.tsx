@@ -135,10 +135,10 @@ export function TasteFinder({ onSelectForLab, onViewProduct }: TasteFinderProps)
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {[
-                    { val: 'MILD', title: '순한맛 (0~1단계)', desc: '사리곰탕, 진라면 순한맛 등 맵지 않고 담백함' },
+                    { val: 'MILD', title: '순한맛 (0~1단계)', desc: '사리곰탕, 순한너구리 등 맵지 않고 담백함' },
                     { val: 'MEDIUM', title: '신라면급 보통 (2단계)', desc: '한국인의 표준 매운맛 (약 3,400 SHU 내외)' },
-                    { val: 'HOT', title: '열라면급 칼칼함 (3단계)', desc: '땀이 송글송글 맺히는 화끈한 매운맛 (5,000 SHU)' },
-                    { val: 'EXTREME', title: '불닭·틈새급 극한 (4~5단계)', desc: '혀를 마비시키는 극강의 매운맛 (8,000+ SHU)' },
+                    { val: 'HOT', title: '얼큰한 칼칼함 (3단계)', desc: '땀이 송글송글 맺히는 화끈한 매운맛 (5,000 SHU)' },
+                    { val: 'EXTREME', title: '신라면 더레드급 극강 (4~5단계)', desc: '강렬한 청양고추와 후추의 극강 매운맛 (7,500+ SHU)' },
                     { val: 'ANY', title: '상관없음 (맵기 무관)', desc: '매운맛 여부는 크게 중요하지 않음' },
                   ].map((opt) => (
                     <button

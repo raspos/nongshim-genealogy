@@ -96,7 +96,7 @@ export function RamenRanking({ onOpenProductModal }: RamenRankingProps) {
           standardText: '한국소비자원 기준 조리법대로 끓인 후 완성된 국물/소스 내 캡사이신류 농도',
           dateText: '2026년 11월 10일 한국소비자원 라면 시험 결과',
           warningNote:
-            '※ 국물라면은 물 500~550ml로 희석되므로, 물을 버리고 비비는 볶음면(불닭 등)의 농도가 상대적으로 훨씬 높게 측정됩니다.',
+            '※ 국물라면은 물 500~550ml로 희석되므로, 물을 따라버리고 비비는 볶음면·비빔면류의 농도가 상대적으로 높게 측정됩니다.',
         };
       }
 

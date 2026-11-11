@@ -83,7 +83,7 @@ export function RamenEncyclopedia({ onOpenProductModal }: RamenEncyclopediaProps
             <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-400" />
             <input
               type="text"
-              placeholder="제품명, 주요 풍미, 제조사, PB 브랜드 검색 (예: 멸치칼국수, 불닭, 오모리, 틈새, 안성탕면)"
+              placeholder="제품명, 주요 풍미, 라인업 검색 (예: 멸치칼국수, 신라면 더 레드, 안성탕면, 너구리, 배홍동)"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="w-full pl-10 pr-4 py-3 rounded-2xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-rose-500 bg-stone-50"
@@ -179,7 +179,7 @@ export function RamenEncyclopedia({ onOpenProductModal }: RamenEncyclopediaProps
                   { id: 'ALL', label: '전체' },
                   { id: 'MILD', label: '순한맛' },
                   { id: 'MEDIUM', label: '신라면급' },
-                  { id: 'HOT', label: '열라면·불닭급' },
+                  { id: 'HOT', label: '신라면 더레드급' },
                 ].map((s) => (
                   <button
                     key={s.id}
