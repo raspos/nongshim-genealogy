@@ -971,42 +971,6 @@ export function LineageTree({
               )}
             </div>
 
-            {/* Dedicated Milestone Timeline Band (Y=54px and Y=92px, zero collision with cards at Y>=220px) */}
-            <div className="absolute top-0 left-0 right-0 z-20 pointer-events-auto">
-              {HISTORICAL_MILESTONES.map((ms, idx) => {
-                let xPos = 70;
-                if (ms.id === 'ms-1963') xPos = 70;
-                else if (ms.id === 'ms-1970-beef') xPos = 250;
-                else if (ms.id === 'ms-1970-jjajang') xPos = 360;
-                else if (ms.id === 'ms-1980s') xPos = 500;
-                else if (ms.id === 'ms-1984') xPos = 690;
-                else if (ms.id === 'ms-2011') xPos = 1220;
-                else if (ms.id === 'ms-2012') xPos = 1350;
-                else if (ms.id === 'ms-2015') xPos = 1480;
-                else if (ms.id === 'ms-2020s') xPos = 1630;
-
-                const yPos = idx % 2 === 0 ? 56 : 94;
-
-                return (
-                  <button
-                    key={ms.id}
-                    onClick={() => setSelectedMilestone(ms)}
-                    className="absolute -translate-x-1/2 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-stone-900 hover:bg-stone-800 text-stone-200 border border-amber-500/70 shadow-lg cursor-pointer hover:scale-105 transition-transform"
-                    style={{ left: `${xPos}px`, top: `${yPos}px` }}
-                    title={`${ms.year}년 ${ms.title}`}
-                  >
-                    <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse shrink-0"></span>
-                    <span className="text-[10px] font-mono font-bold text-amber-300">
-                      {ms.year}
-                    </span>
-                    <span className="text-[11px] font-serif font-black text-stone-100 whitespace-nowrap">
-                      {ms.hanjaTitle}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-
             {/* SVG Connecting Edges Layer */}
             <svg
               className="absolute inset-0 w-full h-full pointer-events-none z-15"
