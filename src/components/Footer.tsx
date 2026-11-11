@@ -16,6 +16,15 @@ export function Footer({ onOpenMethodology }: FooterProps) {
             <span className="text-[10px] px-2 py-0.5 rounded bg-red-100 text-red-800 font-bold border border-red-200">
               NONGSHIM ARCHIVE
             </span>
+            <a
+              href="https://raspos.github.io/databrew/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[11px] text-red-800 hover:text-stone-950 font-black underline underline-offset-2 ml-1"
+              title="데이터브루(databrew) 바로가기"
+            >
+              by databrew
+            </a>
           </div>
 
           {/* 조회수 카운터 (Visitor Counter) */}
@@ -55,7 +64,16 @@ export function Footer({ onOpenMethodology }: FooterProps) {
 
       <div className="max-w-6xl mx-auto px-4 mt-8 pt-6 border-t border-stone-300/70 flex flex-col sm:flex-row items-center justify-between text-[11px] text-stone-500 gap-2">
         <div className="flex items-center gap-1.5 flex-wrap">
-          <span>농심 라면의 계보 (The Genealogy of Nongshim Ramen). All rights reserved.</span>
+          <span>©</span>
+          <a
+            href="https://raspos.github.io/databrew/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-black text-stone-800 hover:text-red-700 underline underline-offset-2 transition-colors"
+          >
+            databrew
+          </a>
+          <span>· 농심 라면의 계보 (The Genealogy of Nongshim Ramen). All rights reserved.</span>
         </div>
         <span className="flex items-center gap-1 font-medium">
           한국 라면 40년 1위 종가, 농심 60년 역사에 헌정합니다.
