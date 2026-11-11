@@ -115,24 +115,24 @@ export const HISTORICAL_EPOCHS: HistoricalEpoch[] = [
   {
     id: 'epoch-3-golden-trio',
     name: '제3기: 안성탕면·짜파게티 & 라면업계 1위 등극',
-    hanja: '天下一統 (천하일통)',
+    hanja: '頂上登極 (정상등극)',
     period: '1983 ~ 1985',
     yearStart: 1983,
     yearEnd: 1985,
-    headline: '스프 전문 안성공장의 준공과 40년 1위 독주 체제의 완성',
+    headline: '스프 전문 안성공장의 준공과 40년 1위 역사의 개막',
     narrative:
-      '1983년 안성에 세계적 수준의 최첨단 스프 전문 공장을 준공하며 가마솥 우골 장국 공법의 \'안성탕면\'("내 입에 안성맞춤")을 선보였습니다. 이듬해 1984년에는 기존 짜장스프의 뭉침을 극복한 그래뉼 스프 공법의 \'짜파게티\'를 내놓으며 일요일의 식문화를 바꿨습니다. 마침내 1985년, 농심은 숙명의 라이벌 삼양식품을 제치고 창립 20년 만에 대한민국 라면 시장 점유율 1위에 등극했습니다.'
+      '1983년 안성에 세계적 수준의 최첨단 스프 전문 공장을 준공하며 가마솥 우골 장국 공법의 \'안성탕면\'("내 입에 안성맞춤")을 선보였습니다. 이듬해 1984년에는 기존 짜장스프의 뭉침을 극복한 그래뉼 스프 공법의 \'짜파게티\'를 내놓으며 온 국민의 식문화를 바꿨습니다. 마침내 1985년, 농심은 창립 20년 만에 대한민국 라면 시장 점유율 1위에 등극하며 오늘날까지 이어지는 40년 독주의 기틀을 닦았습니다.'
   },
   {
     id: 'epoch-4-shin-dynasty',
-    name: '제4기: 신라면(辛) 천하와 대중화의 전성기',
-    hanja: '辛帝國 (신제국)',
+    name: '제4기: 신라면(辛)과 국민 라면의 황금기',
+    hanja: '辛라면神話 (신라면신화)',
     period: '1986 ~ 1999',
     yearStart: 1986,
     yearEnd: 1999,
     headline: '사나이 울리는 신라면의 등장, 30년+ 연속 1위의 신화',
     narrative:
-      '1986년 10월, 신춘호 회장이 직접 한자 매울 辛을 브랜드로 짓고 강렬한 레드/블랙 패키지로 선보인 \'신라면\'이 출시되었습니다. 하루 20여 편의 시식 연구 끝에 완성된 얼큰한 소고기 국물과 표고버섯의 조화는 한국인을 사로잡았고, 1991년 이후 30년 넘게 1위 자리를 단 한 번도 내주지 않는 전설이 되었습니다. 이후 사리곰탕(1988), 튀김우동(1990), 오징어짬뽕(1992), 매운콩라면(1997) 등 걸작들이 연이어 쏟아졌습니다.'
+      '1986년 10월, 신춘호 회장이 직접 한자 매울 辛을 브랜드로 짓고 강렬한 레드/블랙 패키지로 선보인 \'신라면\'이 출시되었습니다. 하루 20여 편의 시식 연구 끝에 완성된 얼큰한 소고기 국물과 표고버섯의 조화는 한국인을 사로잡았고, 1991년 이후 30년 넘게 1위 자리를 단 한 번도 내주지 않는 전설이 되었습니다. 이후 사리곰탕(1988), 튀김우동(1990), 오징어짬뽕(1992), 보글보글 찌개면(1999) 등 걸작들이 연이어 쏟아졌습니다.'
   },
   {
     id: 'epoch-5-premium-wellness',
@@ -284,10 +284,10 @@ export const HISTORICAL_MILESTONES: HistoricalEventMilestone[] = [
     summary: '너구리·안성탕면·짜파게티 3인방의 폭발적 인기로 삼양식품을 제치고 왕좌 차지',
     impactFactionId: 'faction-origin',
     keyProducts: ['neoguri', 'anseongtangmyeon', 'chapagetti'],
-    marketContext: '삼양식품이 1963년 이래 22년간 지켜오던 시장 1위 아성이 처음으로 흔들림',
+    marketContext: '독보적인 연구개발과 포트폴리오 다각화로 시장 1위에 등극',
     innovationFeatures: '국물(안성)·우동(너구리)·비국물(짜파게티)의 완벽한 포트폴리오 삼각편대 완성',
-    distinctionFromMainstream: '단일 주력 상품에 의존하던 경쟁사와 달리 다변화된 맛의 취향 선점',
-    marketLegacy: '1985년부터 오늘날까지 40년 연속 시장 1위를 수성하는 장기 집권의 개막',
+    distinctionFromMainstream: '단일 주력 상품에 의존하던 기존 시장과 달리 다변화된 맛의 취향 선점',
+    marketLegacy: '1985년부터 오늘날까지 40년 연속 시장 1위를 수성하는 농심 신화의 개막',
     sources: ['통계청 광공업 통계 1985', '한국경제신문 1985년 4월 1위 교체 보도']
   },
   {
@@ -295,7 +295,7 @@ export const HISTORICAL_MILESTONES: HistoricalEventMilestone[] = [
     year: 1986,
     dateStr: '1986.10.02',
     epochId: 'epoch-4-shin-dynasty',
-    title: '신라면(辛) 출시 — 사나이 울리는 30년 군주',
+    title: '신라면(辛) 출시 — 사나이 울리는 대한민국 대표 라면의 탄생',
     hanjaTitle: '辛天下 (신천하)',
     summary: '故 신춘호 회장의 파격적 작명과 패키징, 얼큰한 소고기 국물로 30년 천하통일',
     impactFactionId: 'faction-shin',
@@ -539,11 +539,11 @@ export const LINEAGE_LEGEND_NODES: LineageLegendNode[] = [
     epochId: 'epoch-4-shin-dynasty',
     factionId: 'faction-shin',
     factionName: '매운 소고기탕파',
-    hanjaFaction: '辛帝國 (신제국)',
+    hanjaFaction: '辛라면神話 (신라면신화)',
     packageType: 'BAG',
     imageUrl: '/images/products/shin-ramyun.jpg',
     isVintagePhoto: false,
-    historicalRole: '30년 연속 1위 독보적 군주',
+    historicalRole: '30년 연속 1위 대한민국 대표 라면',
     doctrineQuote: '“사나이 울리는 신라면 — 한국인의 매운맛 표준”',
     historicalContext: '신춘호 회장이 직접 \'辛\'을 작명하고 빨간색 패키지로 시장을 뒤흔든 불멸의 역작.',
     legacyImpact: '1991년 이후 대한민국 라면 판매 1위 수성, 세계 100개국 수출 K-라면의 정점.',

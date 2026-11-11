@@ -531,14 +531,12 @@ export function LineageTree({
     <div className="w-full space-y-6">
       {/* ================= 1. PEDIGREE CONTROLS & FILTER BAR ================= */}
       <div className="bg-white border border-stone-200 rounded-3xl p-5 shadow-xs space-y-4">
-        {/* Top: Motif & Philosophy Badge */}
+        {/* Top: Relation Type Legend & Brand Badge */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-stone-100">
           <div className="flex items-center gap-2">
-            <span className="px-3 py-1 rounded-lg bg-stone-950 text-amber-300 font-serif font-black text-xs shadow-xs">
-              라면 파벌 실록
-            </span>
-            <span className="text-sm font-bold text-stone-900 font-serif">
-              한국 라면 60년 맛의 파벌·분열·집권 계보도
+            <span className="w-2 h-2 rounded-full bg-red-600" />
+            <span className="text-xs font-bold text-stone-700 font-serif">
+              농심 60년 라면 계보 (1965 ~ 2026)
             </span>
           </div>
 
@@ -550,15 +548,11 @@ export function LineageTree({
             </span>
             <span className="inline-flex items-center gap-1.5">
               <span className="w-4 border-b-2 border-dashed border-amber-500 inline-block"></span>
-              <span className="font-bold text-amber-700">계열 분화</span>
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <span className="w-4 border-b-2 border-dotted border-purple-500 inline-block"></span>
-              <span className="font-bold text-purple-700">시장 경쟁 (라이벌)</span>
+              <span className="font-bold text-amber-700">라인업 분화</span>
             </span>
             <span className="inline-flex items-center gap-1.5">
               <span className="w-4 border-b-2 border-dashed border-amber-400 inline-block"></span>
-              <span className="font-bold text-amber-600">사조 전환</span>
+              <span className="font-bold text-amber-600">혁신 발전</span>
             </span>
           </div>
         </div>
@@ -613,7 +607,7 @@ export function LineageTree({
           {/* Epoch Selector */}
           <div className="flex items-center gap-2">
             <label htmlFor="epoch-select" className="text-xs font-bold text-stone-500 whitespace-nowrap">
-              시대별 집권기:
+              시대별 발전사:
             </label>
             <select
               id="epoch-select"
@@ -621,7 +615,7 @@ export function LineageTree({
               onChange={(e) => setSelectedEpochId(e.target.value)}
               className="px-3.5 py-2 bg-white border border-stone-300 rounded-xl text-xs font-bold text-stone-800 focus:outline-hidden focus:ring-2 focus:ring-stone-900 cursor-pointer shadow-xs"
             >
-              <option value="ALL">전체 6대 시대 (1963~2026)</option>
+              <option value="ALL">전체 6대 시대 (1965~2026)</option>
               {HISTORICAL_EPOCHS.map((ep) => (
                 <option key={ep.id} value={ep.id}>
                   {ep.name} ({ep.period})
@@ -945,8 +939,8 @@ export function LineageTree({
                     className="absolute inset-x-0 border-b border-stone-800/40 flex items-center px-4"
                     style={{ top: '145px', height: '150px' }}
                   >
-                    <span className="text-[10px] font-serif font-black tracking-wider text-rose-500/70 bg-stone-950/80 px-2.5 py-1 rounded-md border border-rose-950">
-                      사발 용기면 & 전통 곰탕 사골 백탕파 / 극초매운탕 (육개장 사발면 · 사리곰탕 · 틈새라면 · 더레드)
+                    <span className="text-[10px] font-serif font-black tracking-wider text-rose-400 bg-stone-950/80 px-2.5 py-1 rounded-md border border-rose-950">
+                      매운 소고기 탕면 계보 (소고기라면 · 농심라면 · 신라면 · 신라면블랙 · 더 레드)
                     </span>
                   </div>
 
@@ -954,8 +948,8 @@ export function LineageTree({
                     className="absolute inset-x-0 border-b border-stone-800/40 flex items-center px-4"
                     style={{ top: '315px', height: '150px' }}
                   >
-                    <span className="text-[10px] font-serif font-black tracking-wider text-rose-400 bg-stone-950/80 px-2.5 py-1 rounded-md border border-rose-900">
-                      정통 소고기 장국 & 얼큰탕 집권파 (삼양쇠고기면 · 안성탕면 · 신라면 · 참깨라면 · 툼바)
+                    <span className="text-[10px] font-serif font-black tracking-wider text-amber-400 bg-stone-950/80 px-2.5 py-1 rounded-md border border-amber-950">
+                      구수한 장국 & 해물 탕면 계보 (너구리 · 안성탕면 · 오징어짬뽕)
                     </span>
                   </div>
 
@@ -963,8 +957,8 @@ export function LineageTree({
                     className="absolute inset-x-0 border-b border-stone-800/40 flex items-center px-4"
                     style={{ top: '485px', height: '150px' }}
                   >
-                    <span className="text-[10px] font-serif font-black tracking-wider text-sky-400 bg-stone-950/80 px-2.5 py-1 rounded-md border border-sky-950">
-                      원조 닭고기 백탕 & 얼큰 해물·짬뽕파 (삼양라면 1963 · 너구리 · 오징어짬뽕 · 진짬뽕)
+                    <span className="text-[10px] font-serif font-black tracking-wider text-emerald-400 bg-stone-950/80 px-2.5 py-1 rounded-md border border-emerald-950">
+                      사발 용기면 & 담백 우동·백탕 계보 (육개장 사발면 · 김치 사발면 · 사리곰탕 · 튀김우동)
                     </span>
                   </div>
 
@@ -972,8 +966,8 @@ export function LineageTree({
                     className="absolute inset-x-0 border-b border-stone-800/40 flex items-center px-4"
                     style={{ top: '675px', height: '150px' }}
                   >
-                    <span className="text-[10px] font-serif font-black tracking-wider text-amber-600 bg-stone-950/80 px-2.5 py-1 rounded-md border border-amber-950">
-                      비국물 춘장 짜장 & 크림 볶음파 (롯데짜장 · 짜파게티 · 짜왕 · 신라면 툼바)
+                    <span className="text-[10px] font-serif font-black tracking-wider text-amber-500 bg-stone-950/80 px-2.5 py-1 rounded-md border border-amber-950">
+                      비국물 춘장 짜장 & 크림 퓨전 계보 (롯데짜장 · 짜파게티 · 짜왕 · 신라면 툼바)
                     </span>
                   </div>
 
@@ -982,7 +976,7 @@ export function LineageTree({
                     style={{ top: '865px', height: '150px' }}
                   >
                     <span className="text-[10px] font-serif font-black tracking-wider text-blue-400 bg-stone-950/80 px-2.5 py-1 rounded-md border border-blue-950">
-                      새콤달콤 별미 비빔면파 (배홍동 비빔면)
+                      별미 비빔면 & 건면 혁신 계보 (신라면 건면 · 배홍동 비빔면 · 짜파게티 더 블랙)
                     </span>
                   </div>
                 </>
