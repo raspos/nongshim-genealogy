@@ -96,7 +96,7 @@ export function NongshimHeaderLogo() {
         </div>
 
         <h1 className="text-xl sm:text-2xl font-black text-stone-950 tracking-tight font-serif mt-0.5 flex items-center gap-2">
-          <span>라면의 계보</span>
+          <span>농심 라면의 계보</span>
           <span className="text-xs font-mono font-bold px-2 py-0.5 rounded-full bg-stone-900 text-amber-300 border border-stone-700">
             60년 족보
           </span>
