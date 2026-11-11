@@ -32,7 +32,7 @@ export const HISTORICAL_PRODUCTS: RamenProduct[] = [
   {
     id: 'lotte-ramen-1965',
     name: '롯데라면 (1965년)',
-    manufacturer: '농심', // 롯데공업 시절
+    manufacturer: '농심', // 1965년 창립 제품
     brand: '롯데라면',
     releaseYear: 1965,
     productType: 'SOUP',
@@ -44,7 +44,7 @@ export const HISTORICAL_PRODUCTS: RamenProduct[] = [
     isActive: false,
     packagingThemeColor: { bg: '#c0392b', text: '#ffffff', border: '#962d22' },
     imageUrl: '/images/products/lotte-ramen-1965.svg',
-    imageSource: '농심 역사관(구 롯데공업주식회사)',
+    imageSource: '농심 역사관 (1965년 창립 사료)',
     imageStatus: 'VERIFIED_PHOTO',
     nutrition: { weightG: 100, caloriesKcal: 450, sodiumMg: 1700, carbsG: 67, proteinG: 9, fatG: 15, sodiumSeparated: false, soupSodiumRatioEstimated: 0.58 },
     spiciness: { scovilleShu: 500, scovilleProvenance: 'ESTIMATED', capsaicinSoupMgPerKg: null, capsaicinPreparedMgPerL: null, capsaicinProvenance: 'MISSING', spicinessGrade: 1 },
@@ -54,7 +54,7 @@ export const HISTORICAL_PRODUCTS: RamenProduct[] = [
     },
     flavorProfile: { primaryFlavors: ['소고기 육수 바탕', '형님 먼저 아우 먼저 마케팅의 모태', '구수한 간장 풍미'], savoryScore: 4, oilinessScore: 3, saltinessScore: 4, sweetnessScore: 1 },
     lineage: [
-      { targetId: 'shin-ramyun', relation: 'ANCESTOR', description: '신춘호 회장이 롯데공업 설립 후 내놓은 첫 독자 라면', year: 1965 }
+      { targetId: 'shin-ramyun', relation: 'ANCESTOR', description: '신춘호 회장이 1965년 창립 후 내놓은 첫 독자 라면', year: 1965 }
     ],
     priceKrw: 15, officialDataSource: '농심 사사 50년사', verifiedDate: '2026-11-10', dataPipelineStatus: 'PUBLISHED'
   },
@@ -582,7 +582,7 @@ export const HISTORICAL_PRODUCTS: RamenProduct[] = [
   {
     id: 'lotte-jjajang-1970',
     name: '롯데짜장면 (1970년)',
-    manufacturer: '농심', // 롯데공업
+    manufacturer: '농심', // 1970년 출시
     brand: '롯데짜장면',
     releaseYear: 1970,
     productType: 'STIR_FRY',
@@ -594,7 +594,7 @@ export const HISTORICAL_PRODUCTS: RamenProduct[] = [
     isActive: false,
     packagingThemeColor: { bg: '#451a03', text: '#ffffff', border: '#78350f' },
     imageUrl: '/images/products/lotte-jjajang-1970.svg',
-    imageSource: '농심 사사 (구 롯데공업주식회사)',
+    imageSource: '농심 사사 (1970년 최초 짜장 사료)',
     imageStatus: 'VERIFIED_PHOTO',
     nutrition: { weightG: 120, caloriesKcal: 510, sodiumMg: 1100, carbsG: 78, proteinG: 10, fatG: 18, sodiumSeparated: true, soupSodiumRatioEstimated: 0.4 },
     spiciness: { scovilleShu: 0, scovilleProvenance: 'VERIFIED', capsaicinSoupMgPerKg: 0, capsaicinPreparedMgPerL: 0, capsaicinProvenance: 'VERIFIED', spicinessGrade: 0 },

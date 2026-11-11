@@ -686,7 +686,7 @@ export function LineageTree({
             onClick={() => scrollToEpoch(0)}
             className="px-3 py-1 rounded-xl bg-white hover:bg-stone-200 text-stone-800 font-bold text-xs transition cursor-pointer shrink-0 border border-stone-300 hover:border-amber-400 shadow-2xs"
           >
-            1965 롯데공업 창립
+            1965년 창립
           </button>
           <button
             type="button"
@@ -1148,8 +1148,8 @@ export function LineageTree({
                       <h4 className="text-xs font-black text-white line-clamp-1 group-hover:text-amber-300 transition-colors">
                         {node.name}
                       </h4>
-                      <p className="text-[10px] text-stone-300 font-serif leading-none mt-0.5 font-bold">
-                        {node.hanjaFaction}
+                      <p className="text-[10px] text-stone-300 leading-none mt-0.5 font-bold">
+                        {node.historicalRole}
                       </p>
                     </div>
 
@@ -1225,8 +1225,8 @@ export function LineageTree({
                 <span className="text-xs font-mono font-bold text-amber-300">
                   {selectedLegendNode.releaseYear}년 출시
                 </span>
-                <span className="text-xs font-serif font-bold text-stone-300">
-                  {selectedLegendNode.hanjaFaction} · {selectedLegendNode.factionName}
+                <span className="text-xs font-bold text-stone-300">
+                  {selectedLegendNode.factionName}
                 </span>
               </div>
 

@@ -1,5 +1,5 @@
 import { VisitorCounter } from './VisitorCounter';
-import { NongshimOfficialLogo, NongshimVintageLotteBadge } from './NongshimLogo';
+import { NongshimOfficialLogo } from './NongshimLogo';
 
 interface FooterProps {
   onOpenMethodology: () => void;
@@ -16,22 +16,15 @@ export function Footer({ onOpenMethodology }: FooterProps) {
             <span className="text-[10px] px-2 py-0.5 rounded bg-red-100 text-red-800 font-bold border border-red-200">
               NONGSHIM ARCHIVE
             </span>
-            <a
-              href="https://raspos.github.io/databrew/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[11px] text-red-800 hover:text-stone-950 font-black underline underline-offset-2 ml-1"
-            >
-              by databrew
-            </a>
           </div>
 
+          {/* 조회수 카운터 (Visitor Counter) */}
           <div className="pt-1">
-            <NongshimVintageLotteBadge />
+            <VisitorCounter />
           </div>
 
           <p className="text-stone-600 leading-relaxed">
-            "1965년 롯데공업 설립부터 1985년 대한민국 1위 등극, 그리고 세계인의 식탁까지" — 60년 농심 라면의 정통 족보와 고유한 조리 데이터, 영양성분 및 전설의 모디슈머 조합을 집대성한 데이터저널리즘 아카이브입니다.
+            "1965년 창립부터 1985년 대한민국 1위 등극, 그리고 세계인의 식탁까지" — 60년 농심 라면의 정통 족보와 고유한 조리 데이터, 영양성분 및 전설의 모디슈머 조합을 집대성한 데이터저널리즘 아카이브입니다.
           </p>
           <div className="pt-1 text-[11px] text-stone-500">
             데이터 출처: (주)농심 60년사 · 한국소비자원(2026.11) · 식품의약품안전처 라면영양DB · 나무위키 농심 역사고증
@@ -60,23 +53,9 @@ export function Footer({ onOpenMethodology }: FooterProps) {
         </div>
       </div>
 
-      {/* Visitor Counter Section (Hongdam Craft Style) */}
-      <div className="max-w-6xl mx-auto px-4 mt-8 flex justify-center">
-        <VisitorCounter />
-      </div>
-
-      <div className="max-w-6xl mx-auto px-4 mt-6 pt-6 border-t border-stone-300/70 flex flex-col sm:flex-row items-center justify-between text-[11px] text-stone-500 gap-2">
+      <div className="max-w-6xl mx-auto px-4 mt-8 pt-6 border-t border-stone-300/70 flex flex-col sm:flex-row items-center justify-between text-[11px] text-stone-500 gap-2">
         <div className="flex items-center gap-1.5 flex-wrap">
-          <span>©</span>
-          <a
-            href="https://raspos.github.io/databrew/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-black text-stone-800 hover:text-red-700 underline underline-offset-2 transition-colors"
-          >
-            databrew
-          </a>
-          <span>· 농심 라면의 계보 (The Genealogy of Nongshim Ramen). All rights reserved.</span>
+          <span>농심 라면의 계보 (The Genealogy of Nongshim Ramen). All rights reserved.</span>
         </div>
         <span className="flex items-center gap-1 font-medium">
           한국 라면 40년 1위 종가, 농심 60년 역사에 헌정합니다.

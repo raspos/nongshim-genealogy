@@ -29,7 +29,7 @@ export function Header({ onOpenMethodology: _onOpenMethodology }: HeaderProps) {
     <header className="border-b border-stone-200 bg-[#faf9f5] sticky top-0 z-40 backdrop-blur-md bg-opacity-95">
       {/* Main Masthead & Navigation Bar */}
       <div className="max-w-7xl mx-auto px-4 py-3 sm:py-4 flex flex-col md:flex-row md:items-center justify-between gap-3">
-        {/* Brand Logo & databrew badge */}
+        {/* Brand Logo */}
         <div className="flex items-center gap-3">
           <a
             href="#/"
@@ -38,16 +38,6 @@ export function Header({ onOpenMethodology: _onOpenMethodology }: HeaderProps) {
             title="농심 라면의 계보 홈으로 (클릭 시 새로고침)"
           >
             <NongshimHeaderLogo />
-          </a>
-          <a
-            href="https://raspos.github.io/databrew/"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="hidden lg:inline text-xs font-black text-stone-500 hover:text-red-700 underline underline-offset-2 transition-colors ml-1"
-            title="databrew 방문하기"
-          >
-            © databrew
           </a>
         </div>
 

@@ -13,7 +13,7 @@ export function GenealogyTimeline({ onOpenProductModal }: GenealogyTimelineProps
 
   // Group products by decade/era (Nongshim 60-year focused)
   const eras = [
-    { label: '1960~70년대: 롯데공업 창립 & 소고기·농심라면 태동기', start: 1965, end: 1979 },
+    { label: '1960~70년대: 1965년 창립 & 소고기·농심라면 태동기', start: 1965, end: 1979 },
     { label: '1980년대: 국민 4대 천왕의 황금기 (너구리·안성탕면·짜파게티·신라면)', start: 1980, end: 1989 },
     { label: '1990년대: 국물 다변화 & 용기면 대중화 (튀김우동·오징어짬뽕·보글보글)', start: 1990, end: 1999 },
     { label: '2000년대: 프리미엄 탕면 & 웰빙 건면 (무파마·사천짜파게티·감자면)', start: 2000, end: 2009 },

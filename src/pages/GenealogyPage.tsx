@@ -23,7 +23,7 @@ export function GenealogyPage({ onSelectProduct }: GenealogyPageProps) {
       <div className="max-w-4xl mx-auto text-center mb-10">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/90 text-amber-300 text-xs font-serif font-bold mb-4 shadow-sm border border-red-700/50">
           <NongshimSymbol className="w-4 h-4 inline-block" />
-          <span>1965년 롯데공업 창립 · 1985년 이래 40년 연속 1위 종가</span>
+          <span>1965년 창립 · 1985년 이래 40년 연속 1위 종가</span>
           <span className="w-1 h-1 rounded-full bg-amber-400" />
           <span className="text-stone-300 font-sans">농심 60년 전사 아카이브</span>
         </div>
@@ -36,7 +36,7 @@ export function GenealogyPage({ onSelectProduct }: GenealogyPageProps) {
         </div>
 
         <p className="mt-3 text-base sm:text-lg text-stone-700 font-medium leading-relaxed">
-          1965년 롯데공업에서 태동하여 대한민국 식문화를 바꾼 60년 맛의 대하드라마
+          1965년 창립 이래 대한민국 식문화를 바꾼 60년 맛의 대하드라마
         </p>
         <p className="text-xs sm:text-sm text-stone-500 mt-1 font-serif max-w-2xl mx-auto">
           소고기라면(1970)과 농심라면(1975)의 기틀 위에 너구리·안성탕면·짜파게티 삼총사, 그리고 불멸의 신라면(1986)까지 — 25개 핵심 분기점과 62종 전수 족보

@@ -1171,7 +1171,7 @@ export const NONGSHIM_PRODUCTS: RamenProduct[] = [
     isActive: false,
     packagingThemeColor: { bg: '#854d0e', text: '#fef08a', border: '#713f12' },
     imageUrl: '/images/products/lotte-ramyun-1965.png',
-    imageSource: '농심 60년 사사 및 롯데공업 창립 아카이브',
+    imageSource: '농심 60년 사사 및 1965년 창립 아카이브',
     imageStatus: 'VERIFIED_PHOTO',
     nutrition: { weightG: 100, caloriesKcal: 420, sodiumMg: 1650, carbsG: 68, proteinG: 8, fatG: 13, sodiumSeparated: false, soupSodiumRatioEstimated: 0.55 },
     spiciness: { scovilleShu: 500, scovilleProvenance: 'ESTIMATED', capsaicinSoupMgPerKg: 20.0, capsaicinPreparedMgPerL: 0.8, capsaicinProvenance: 'ESTIMATED', spicinessGrade: 1 },

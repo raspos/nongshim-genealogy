@@ -53,10 +53,10 @@ export const NongshimVintageLotteBadge: React.FC<{ className?: string }> = ({ cl
   return (
     <div
       className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-stone-900 border border-amber-600/70 text-[10px] font-mono text-amber-300 font-bold ${className}`}
-      title="1965년 롯데공업 창립 모태"
+      title="1965년 창립 모태"
     >
       <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-      <span>SINCE 1965 롯데공업</span>
+      <span>SINCE 1965 (1965년 창립)</span>
     </div>
   );
 };

@@ -25,11 +25,11 @@ export function VisitorCounter() {
             : '외부 카운터 동기화 대기 — 로컬 캐시 집계'
         }
       >
-        {/* Today sessions */}
+        {/* Today views */}
         <div className="flex items-center gap-1.5 text-stone-400">
           <Eye className="w-3.5 h-3.5 text-sky-400 shrink-0" />
           <span className="text-[11px] font-bold text-stone-300">
-            오늘 접속(세션)
+            오늘 조회수
           </span>
           <span className="font-mono font-bold text-amber-300 bg-stone-950 px-2 py-0.5 rounded border border-stone-800 text-xs">
             {stats.today.toLocaleString()}
@@ -38,11 +38,11 @@ export function VisitorCounter() {
 
         <span className="text-stone-700 font-bold select-none">|</span>
 
-        {/* Total sessions */}
+        {/* Total views */}
         <div className="flex items-center gap-1.5 text-stone-400">
           <Users className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
           <span className="text-[11px] font-bold text-stone-300">
-            누적 접속
+            누적 조회수
           </span>
           <span className="font-mono font-bold text-emerald-300 bg-stone-950 px-2 py-0.5 rounded border border-stone-800 text-xs">
             {stats.total.toLocaleString()}
