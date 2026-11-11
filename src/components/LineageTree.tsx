@@ -248,27 +248,29 @@ export function LineageTree({
     return FACTION_TAXONOMY.find((f) => f.id === factionId);
   };
 
+  // Helper to distinguish Soup vs Non-Soup ramen in Nongshim line
+  const isNonSoup = (n: LineageLegendNode | { factionId: string; id: string }) => {
+    return (
+      n.factionId === 'faction-jjajang' ||
+      n.factionId === 'faction-bibim' ||
+      n.id === 'chapaguri-bowl' ||
+      n.id === 'shin-toomba'
+    );
+  };
+
+  const isSoup = (n: LineageLegendNode | { factionId: string; id: string }) => {
+    return !isNonSoup(n);
+  };
+
   // Filter nodes for canvas rendering
   const filteredNodes = useMemo(() => {
     return LINEAGE_LEGEND_NODES.filter((n) => {
       if (selectedEpochId !== 'ALL' && n.epochId !== selectedEpochId) return false;
       if (selectedBranch === 'SOUP') {
-        return (
-          n.factionId === 'root-chicken' ||
-          n.factionId === 'spicy-beef' ||
-          n.factionId === 'seafood-ocean' ||
-          n.factionId === 'bone-broth' ||
-          n.factionId === 'white-broth-rebel' ||
-          n.factionId === 'extreme-spicy'
-        );
+        return isSoup(n);
       }
       if (selectedBranch === 'NON_SOUP') {
-        return (
-          n.factionId === 'jjajang-chunjang' ||
-          n.factionId === 'bibim-cold' ||
-          n.factionId === 'fire-bokkeum' ||
-          n.factionId === 'cream-fusion'
-        );
+        return isNonSoup(n);
       }
       if (selectedBranch === 'RIVALRY') {
         const isRivalryNode = LINEAGE_EDGES.some(
@@ -297,26 +299,12 @@ export function LineageTree({
         return edge.relationType === 'MARKET_RIVALRY';
       }
 
-      const isSoup = (f: string) =>
-        f === 'root-chicken' ||
-        f === 'spicy-beef' ||
-        f === 'extreme-spicy' ||
-        f === 'seafood-ocean' ||
-        f === 'bone-broth' ||
-        f === 'white-broth-rebel';
-
-      const isNonSoup = (f: string) =>
-        f === 'jjajang-chunjang' ||
-        f === 'bibim-cold' ||
-        f === 'fire-bokkeum' ||
-        f === 'cream-fusion';
-
       // 3. In SOUP mode, ensure both endpoints are soup ramen
       if (selectedBranch === 'SOUP') {
         const fromNode = getNodeById(edge.fromId);
         const toNode = getNodeById(edge.toId);
         if (!fromNode || !toNode) return false;
-        return isSoup(fromNode.factionId) && isSoup(toNode.factionId);
+        return isSoup(fromNode) && isSoup(toNode);
       }
 
       // 4. In NON_SOUP mode, ensure both endpoints are non-soup ramen
@@ -324,7 +312,7 @@ export function LineageTree({
         const fromNode = getNodeById(edge.fromId);
         const toNode = getNodeById(edge.toId);
         if (!fromNode || !toNode) return false;
-        return isNonSoup(fromNode.factionId) && isNonSoup(toNode.factionId);
+        return isNonSoup(fromNode) && isNonSoup(toNode);
       }
 
       return true;
@@ -334,10 +322,10 @@ export function LineageTree({
   // Dynamic Y-coordinate calculator: in NON_SOUP mode, pull non-soup lanes up to the top
   const getNodeY = (node: LineageLegendNode) => {
     if (selectedBranch === 'NON_SOUP') {
-      if (node.canvasY >= 850) {
+      if (node.factionId === 'faction-bibim') {
         return 470; // Lane: 별미 비빔면파 (배홍동)
       }
-      return 280; // Lane: 짜장 · 볶음 · 퓨전파 (짜파게티, 짜왕, 신라면 툼바 등)
+      return 280; // Lane: 짜장 · 볶음 · 퓨전파 (짜파게티, 짜왕, 신라면 툼바, 짜파구리 등)
     }
     return node.canvasY;
   };
