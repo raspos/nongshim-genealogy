@@ -1095,14 +1095,11 @@ export function LineageTree({
                       )}
                     </div>
 
-                    {/* Product Name & Brand */}
+                    {/* Product Name */}
                     <div className="text-center mt-1">
                       <h4 className="text-xs font-black text-white line-clamp-1 group-hover:text-amber-300 transition-colors">
                         {node.name}
                       </h4>
-                      <p className="text-[10px] text-stone-300 leading-none mt-0.5 font-bold">
-                        {node.historicalRole}
-                      </p>
                     </div>
 
                     {/* On-Card Editorial Story Button when Selected */}
