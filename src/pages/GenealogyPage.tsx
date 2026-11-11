@@ -38,8 +38,10 @@ export function GenealogyPage({ onSelectProduct }: GenealogyPageProps) {
         <p className="mt-3 text-base sm:text-lg text-stone-700 font-medium leading-relaxed">
           1965년 창립 이래 대한민국 식문화를 바꾼 60년 맛의 대하드라마
         </p>
-        <p className="text-xs sm:text-sm text-stone-500 mt-1 font-serif max-w-2xl mx-auto">
-          소고기라면(1970)과 농심라면(1975)의 기틀 위에 너구리·안성탕면·짜파게티 삼총사, 그리고 불멸의 신라면(1986)까지 — 25개 핵심 분기점과 62종 전수 족보
+        <p className="text-xs sm:text-sm text-stone-500 mt-1 font-serif max-w-2xl mx-auto break-keep leading-relaxed">
+          소고기라면(1970)과 농심라면(1975)의 기틀 위에 너구리·안성탕면·짜파게티 삼총사,
+          <br />
+          그리고 불멸의 신라면(1986)까지 — 25개 핵심 분기점과 62종 전수 족보
         </p>
 
         {/* Search & Quiz Action Bar */}
