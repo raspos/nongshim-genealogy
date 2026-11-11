@@ -1210,12 +1210,21 @@ export function LineageTree({
               </div>
 
               <div>
-                <h4 className="text-xs font-black text-stone-500 uppercase tracking-wider mb-2">
-                  역사적 서사와 사조 평정기
+                <h4 className="text-xs font-black text-stone-500 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+                  <span>역사적 서사와 사조 평정기</span>
                 </h4>
-                <p className="text-sm text-stone-700 leading-relaxed bg-stone-50 p-4 rounded-2xl border border-stone-200/80">
-                  {selectedLegendNode.editorialNote}
-                </p>
+                <div className="text-sm text-stone-800 leading-relaxed bg-stone-50 p-5 rounded-2xl border border-stone-200/90 space-y-3 font-serif">
+                  <p className="leading-relaxed">
+                    {selectedLegendNode.editorialNote || selectedLegendNode.historicalContext}
+                  </p>
+                  {selectedLegendNode.legacyImpact && (
+                    <div className="pt-3 border-t border-stone-200 flex items-start gap-2 text-xs font-sans text-stone-600">
+                      <span className="font-bold text-amber-900 shrink-0">🏛️ 식문화 유산 & 시장 영향:</span>
+                      <span className="font-medium text-stone-700">{selectedLegendNode.legacyImpact}</span>
+                    </div>
+                  )}
+                </div>
               </div>
 
               {/* Connected Lineage Edges */}
